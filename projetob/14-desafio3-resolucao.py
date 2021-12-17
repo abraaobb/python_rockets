@@ -1,23 +1,39 @@
 funcionarios = []
 soma_mulheres = 0
 soma_homens = 0
-opcao = 1
 
-while not opcao == 0:
-    print('1 - cadastrar funcionario')
-    print('2 - soma do salario dos homens')
-    print('3 - soma do salario das mulheres')
-    print('4 - imprimir lista dos funcionarios')
-    print('0 - sair do programa')
 
-    opcao = int(input('digite a opcao: '))
+def cadastrar():
+    global soma_homens, soma_mulheres
+    nome = input('Digite seu nome: ')
+    sexo = input('Digite seu sexo: ')
+    salario = float(input('Digite seu salário: '))
+
+    funcionarios.append({'nome': nome, 'sexo': sexo, 'salario': salario})
+    if sexo == 'M':
+        soma_homens += salario
+    else:
+        soma_mulheres += salario
+
+
+while True:
+    print('1 - Cadastrar funcionário')
+    print('2 - Soma do salário dos homens')
+    print('3 - Soma do salário das mulheres')
+    print('4 - Imprimir a lista dos funcionários')
+    print('0 - Sair do programa')
+
+    opcao = int(input('Escolha sua opção: '))
 
     if opcao == 1:
-        nome = input('digite seu nome: ')
+        cadastrar()
     elif opcao == 2:
-        pass
+        print(f'Soma do salário dos homens é {soma_homens}')
     elif opcao == 3:
-        pass
+        print(f'Soma do salário das mulheres é {soma_mulheres}')
     elif opcao == 4:
-        pass
-    else: pass
+        print(funcionarios)
+    elif opcao == 0:
+        break
+    else:
+        print('Opção inválida')
