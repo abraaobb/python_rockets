@@ -24,23 +24,24 @@ https://www.python.org/
 após instalar para verificar versão digite o comando no terminal
 ```python --version```
 
+## Usando o pip
+
+o pip é o gerenciador de pacotesdo python, podemos ver os pacotes disponíveis através do site https://pypi.org/
+
+
+
 ## Usando o terminal
 
-para usar o terminal como 
+para usar o terminal inteligente do python abra o terminal e digite
+```python```
 
-​	Abrir terminal e digitar: python
+## Usando o VSCode
 
-
-VSCode
-	Extensão Python
-
-
-Gerenciador de pacotes PIP
-	https://pypi.org/
+Extensão Python
+	
 
 Atualizar o pip
 	pip install --upgrade pip
-
 
 Instalar o virtual enviroment
 	pip install virtualenv
